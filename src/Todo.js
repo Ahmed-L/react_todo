@@ -58,15 +58,19 @@ function Todo(props)
     
 
     return(
-        <div className="Todo m-auto w-100">
-            <input type="checkbox" className="w-5 h-5 mr-4 accent-pink-500 rounded:xl !imortant" checked={isComplete} onChange={()=>{handleCheckbox(id)}}></input>
-            <input className="w-4/12 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-indigo-500 focus:outline-none" type="text" value={todo_content} disabled={!isEditable} onChange={
-                (event)=>{setContent(event.target.value);}} style={textStyle}></input>
-            <button className="flex-row items-center w-32 h-12 text-white bg-pink-600 hover:bg-pink-900 focus:ring-1 focus:outline-none focus:ring-violet-900 font-medium rounded-lg text-sm ml-2" 
-            onClick={(event)=>{handleEditButton(event)}}>
-            {editButtonState}</button>
-            <button className="flex-row items-center w-32 h-12 text-white bg-purple-600 hover:bg-purple-900 focus:ring-1 focus:outline-none focus:ring-violet-900 font-medium rounded-lg text-sm ml-2"
-             onClick={()=>{handleButtonFunctionalites(id, true)}}>Delete</button>
+        <div className="flex flex-row justify-end mt-5">
+            <div className='flex-row grow'>
+                <input type="checkbox" className="w-6 h-6 mx-4 accent-pink-500 rounded:xl" checked={isComplete} onChange={()=>{handleCheckbox(id)}}></input>
+                <input className="w-10/12 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:border-indigo-500 focus:outline-none" type="text" value={todo_content} disabled={!isEditable} onChange={
+                    (event)=>{setContent(event.target.value);}} style={textStyle}></input>
+            </div>
+            <div className='flex flex-row gap-x-2'>
+                <button className="flex-row items-center w-28 h-12 text-white bg-pink-600 hover:bg-pink-900 focus:ring-1 focus:outline-none focus:ring-violet-900 font-medium rounded-lg text-sm" 
+                onClick={(event)=>{handleEditButton(event)}}>
+                {editButtonState}</button>
+                <button className="flex-row items-center w-28 h-12 text-white bg-purple-600 hover:bg-purple-900 focus:ring-1 focus:outline-none focus:ring-violet-900 font-medium rounded-lg text-sm"
+                onClick={()=>{handleButtonFunctionalites(id, true)}}>Delete</button>
+            </div>
         </div>
     )
 }

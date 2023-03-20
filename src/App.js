@@ -14,12 +14,12 @@ function App() {
   }
 
   return (
-    <div className="App bg-inherit dark:bg-inherit">
+    <div className="App bg-inherit dark:inherit w-8/12 mx-auto">
       <header className="text-3xl text-white font-bold mb-5">Todo List</header>
-      <div>
+      <div className='dark:bg-inherit'>
         <InputForm updateLength={handleLocalStorageLength}/>
       </div>
-      <div className='container mt-32'>
+      <div className='container mt-32 dark:inherit w-11/12 mx-auto'>
       <h2 className='text-3xl text-white font-bold mb-5'>Tasks</h2>
         <Container_TodoList updateLength={handleLocalStorageLength}/>
       </div>
