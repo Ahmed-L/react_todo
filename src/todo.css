@@ -1,0 +1,33 @@
+.todo-list-input{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+button{
+    font-weight: bold;
+    padding: 8px;
+    background-color: rgb(83, 77, 200);
+    color: rgb(233, 232, 232);
+    border-radius: 4px;
+    /* width: auto; */
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.Edit{
+    background-color: yellow;
+    color: black;
+}
+
+.Delete{
+    background-color: red;
+}
+
+.Edit:hover{
+    background-color: rgb(105, 105, 22);
+    color: black;
+}
+
+.Delete:hover{
+    background-color: rgb(53, 6, 6);
+}

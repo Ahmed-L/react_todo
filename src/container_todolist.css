@@ -1,0 +1,5 @@
+.todolist-container{
+    margin-top: 2px;
+    display: grid;
+    gap: 20px;
+}
